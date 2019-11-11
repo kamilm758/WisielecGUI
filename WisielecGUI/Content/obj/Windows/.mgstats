@@ -1,0 +1,8 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/BackButton.png","C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/bin/Windows/BackButton.xnb","TextureProcessor","Texture2DContent",1296,57385,0,1250415
+"C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/ExitButton.png","C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/bin/Windows/ExitButton.xnb","TextureProcessor","Texture2DContent",1250,57385,0,0156279
+"C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/FontMenu.spritefont","C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/bin/Windows/FontMenu.xnb","FontDescriptionProcessor","SpriteFontContent",2008,21521,0,1843974
+"C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/FontRanking.spritefont","C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/bin/Windows/FontRanking.xnb","FontDescriptionProcessor","SpriteFontContent",2013,37905,0,0312606
+"C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/NewGameButton.png","C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/bin/Windows/NewGameButton.xnb","TextureProcessor","Texture2DContent",1671,57385,0,0156266
+"C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/RankingButton.png","C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/bin/Windows/RankingButton.xnb","TextureProcessor","Texture2DContent",1928,57385,0
+"C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/RankingTitle.png","C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/bin/Windows/RankingTitle.xnb","TextureProcessor","Texture2DContent",2182,77205,0
