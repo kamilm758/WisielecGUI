@@ -5,14 +5,46 @@
   <Config />
   <SourceFiles>
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/BackButton.png</File>
+    <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/bb5.png</File>
+    <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/ConfirmButton.png</File>
+    <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/EasyGameButton.png</File>
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/ExitButton.png</File>
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/FontMenu.spritefont</File>
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/FontRanking.spritefont</File>
+    <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/GameFont.spritefont</File>
+    <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/hangman/1.png</File>
+    <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/hangman/10.png</File>
+    <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/hangman/2.png</File>
+    <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/hangman/3.png</File>
+    <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/hangman/4.png</File>
+    <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/hangman/5.png</File>
+    <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/hangman/6.png</File>
+    <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/hangman/7.png</File>
+    <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/hangman/8.png</File>
+    <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/hangman/9.png</File>
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/NewGameButton.png</File>
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/RankingButton.png</File>
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/RankingTitle.png</File>
+    <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/TextBox.png</File>
+    <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/TitleFont.spritefont</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

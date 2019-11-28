@@ -10,7 +10,7 @@ using WiesielecLogika;
 
 namespace WisielecGUI.States
 {
-    class RankingScene : DrawableGameComponent
+    public class RankingScene : DrawableGameComponent
     {
         Game game;
         Ranking ranking;
@@ -44,7 +44,7 @@ namespace WisielecGUI.States
         public void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
             spriteBatch.Begin();
-            spriteBatch.Draw(tekstury["RankingTitleTexture"], recRankTitle, Color.CornflowerBlue);
+            spriteBatch.Draw(tekstury["RankingTitleTexture"], recRankTitle, Color.White);
             foreach (KeyValuePair<string, int> pair in sortedList)
             {
                 ManageRankList(iterator, (iterator+". "+pair.Key + " : " + pair.Value).Length);
@@ -122,6 +122,11 @@ namespace WisielecGUI.States
             }
             else
                 BackButtonColor = Color.White;
+        }
+        public void SetRanking(Ranking ranking)
+        {
+            this.ranking = ranking;
+            sortedList = ranking.GetSortedRanking();
         }
     }
 }

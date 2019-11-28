@@ -1,10 +1,2 @@
-Kamil 9
-Elo -9
-RObert 8
-Pawel 10
-Piotr 4
-Kuba 4
-Jan 5
-Ania 4
-Kamil1 9
-Elo1 -9
+kamil 27
+tomek 10

@@ -14,16 +14,20 @@ namespace WisielecGUI
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        GraWisielec graWisielec = new GraWisielec();
         MenuScene menuScene;
         GameScene gameScene;
         RankingScene rankingScene;
+        PlayerNameScene playerNameScene;
+        GraWisielec graWisielec;
+        string imie;
+        Dictionary<string, Texture2D> tekstury = new Dictionary<string, Texture2D>();
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            graWisielec.NowaGra(1, "name");
+            this.graphics.PreferredBackBufferWidth = 1280;
+            this.graphics.PreferredBackBufferHeight = 720;
         }
 
         /// <summary>
@@ -38,10 +42,11 @@ namespace WisielecGUI
 
             base.Initialize();
             IsMouseVisible = true;
-            Window.AllowUserResizing = true;
+            Window.AllowUserResizing = false;
             menuScene = new MenuScene(this);
             gameScene = new GameScene(this);
             rankingScene = new RankingScene(this);
+            playerNameScene = new PlayerNameScene(this);
         }
 
         /// <summary>
@@ -55,6 +60,7 @@ namespace WisielecGUI
 
             // TODO: use this.Content to load your game content here
             GameState.IsShowMainMenuScene = true;
+            tekstury.Add("background", this.Content.Load<Texture2D>("bb5"));
 
         }
 
@@ -78,12 +84,17 @@ namespace WisielecGUI
                 GameState.IsShowMainMenuScene=true;
 
             // TODO: Add your update logic here
+            InputManager.Update();
             if (GameState.IsShowMainMenuScene)
                 menuScene.Update();
-            if (GameState.IsShowGameScene)
+            else if (GameState.IsShowGameScene)
                 gameScene.Update();
-            if (GameState.IsRankingScene)
+            else if (GameState.IsRankingScene)
                 rankingScene.Update();
+            else if (GameState.IsPlayerNameScene)
+            {
+                playerNameScene.Update();
+            }
 
             base.Update(gameTime);
         }
@@ -94,17 +105,41 @@ namespace WisielecGUI
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.BurlyWood);
+            spriteBatch.Begin();
+            spriteBatch.Draw(tekstury["background"], new Rectangle(0, 0, GraphicsDevice.Viewport.Width,GraphicsDevice.Viewport.Height), Color.White);
+            spriteBatch.End();
 
             // TODO: Add your drawing code here
-                if (GameState.IsShowMainMenuScene)
+            if (GameState.IsShowMainMenuScene)
                     menuScene.Draw(spriteBatch, gameTime);
                 if (GameState.IsShowGameScene)
                     gameScene.Draw(spriteBatch, gameTime);
                 if (GameState.IsRankingScene)
                     rankingScene.Draw(spriteBatch, gameTime);
-
+                if (GameState.IsPlayerNameScene)
+                    playerNameScene.Draw(spriteBatch, gameTime);
                 base.Draw(gameTime);
+        }
+        public void SetGraWisielec(GraWisielec graWisielec)
+        {
+            this.graWisielec = graWisielec;
+        }
+        public void SetImie(string imie)
+        {
+            this.imie = imie;
+        }
+        public GraWisielec GetGraWisielec()
+        {
+            return graWisielec;
+        }
+        public string GetImie()
+        {
+            return imie;
+        }
+        public RankingScene GetRankingScene()
+        {
+            return rankingScene;
         }
     }
 }

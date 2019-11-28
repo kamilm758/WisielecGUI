@@ -12,7 +12,7 @@ namespace WisielecGUI.States
 {
     class MenuScene : DrawableGameComponent
     {
-        Game game;
+        Game1 game;
         public static Dictionary<string, Texture2D> tekstury = new Dictionary<string, Texture2D>();
         SpriteFont font;
         MouseState mouseState;
@@ -24,7 +24,7 @@ namespace WisielecGUI.States
         Color RankingButtonColor;
         Color ExitButtonColor;
 
-        public MenuScene(Game game) : base(game)
+        public MenuScene(Game1 game) : base(game)
         {
             this.game = game;
             LoadContent();
@@ -32,7 +32,7 @@ namespace WisielecGUI.States
 
         protected override void LoadContent()
         {
-            font = game.Content.Load<SpriteFont>("FontMenu");
+            font = game.Content.Load<SpriteFont>("TitleFont");
             tekstury.Add("NewGameButtonTexture", game.Content.Load<Texture2D>("NewGameButton"));
             tekstury.Add("RankingButtonTexture", game.Content.Load<Texture2D>("RankingButton"));
             tekstury.Add("ExitButtonTexture", game.Content.Load<Texture2D>("ExitButton"));
@@ -88,10 +88,10 @@ namespace WisielecGUI.States
             if ((recNewGame.Intersects(Cursor)))
             {
                 NewGameButtonColor = Color.Green;
-                if (mouseState.LeftButton == ButtonState.Pressed)
+                if (InputManager.LeftButtonPressed())
                 {
                     NewGameButtonColor = Color.Red;
-                    GameState.IsShowGameScene = true;
+                    GameState.IsPlayerNameScene = true;
                 }
             }
             else
@@ -100,9 +100,10 @@ namespace WisielecGUI.States
             if ((recRanking.Intersects(Cursor)))
             {
                 RankingButtonColor = Color.Green;
-                if (mouseState.LeftButton == ButtonState.Pressed)
+                if (InputManager.LeftButtonPressed())
                 {
                     RankingButtonColor = Color.Red;
+                    game.GetRankingScene().SetRanking(new WiesielecLogika.Ranking());
                     GameState.IsRankingScene = true;
                 }
             }
@@ -112,7 +113,7 @@ namespace WisielecGUI.States
             if ((recExit.Intersects(Cursor)))
             {
                 ExitButtonColor = Color.Green;
-                if (mouseState.LeftButton == ButtonState.Pressed)
+                if (InputManager.LeftButtonPressed())
                 {
                     ExitButtonColor = Color.Red;
                     game.Exit();
