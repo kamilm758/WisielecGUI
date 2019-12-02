@@ -1,2 +1,5 @@
 kamil 27
 tomek 10
+ -15
+janek -8
+Honolulu 30

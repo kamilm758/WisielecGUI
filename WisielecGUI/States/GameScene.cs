@@ -36,7 +36,7 @@ namespace WisielecGUI.States
         protected override void LoadContent()
         {
             font = game.Content.Load<SpriteFont>("GameFont");
-            tekstury.Add("ConfirmButtonTexture", game.Content.Load<Texture2D>("ConfirmButton"));
+            tekstury.Add("ConfirmButtonTexture", game.Content.Load<Texture2D>("Potwierdz"));
             tekstury.Add("1", game.Content.Load<Texture2D>("hangman/1"));
             tekstury.Add("2", game.Content.Load<Texture2D>("hangman/2"));
             tekstury.Add("3", game.Content.Load<Texture2D>("hangman/3"));
@@ -47,7 +47,7 @@ namespace WisielecGUI.States
             tekstury.Add("8", game.Content.Load<Texture2D>("hangman/8"));
             tekstury.Add("9", game.Content.Load<Texture2D>("hangman/9"));
             tekstury.Add("10", game.Content.Load<Texture2D>("hangman/10"));
-            tekstury.Add("BackButtonTexture", game.Content.Load<Texture2D>("BackButton"));
+            tekstury.Add("BackButtonTexture", game.Content.Load<Texture2D>("Powrot"));
         }
 
         public void Draw(SpriteBatch spriteBatch, GameTime gameTime)
@@ -59,7 +59,7 @@ namespace WisielecGUI.States
                 spriteBatch.DrawString(font, "Haslo jest o kategorii " + game.GetGraWisielec().GetSlowo().GetKategoria(), new Vector2(GraphicsDevice.Viewport.Width / 2 - 235,  GraphicsDevice.Viewport.Height / 10), Color.White);
                 if (haslo != null)
                     spriteBatch.DrawString(font, haslo.ToString(), new Vector2(GraphicsDevice.Viewport.Width / 2 - 70, 3*GraphicsDevice.Viewport.Height / 10), Color.Red);
-                spriteBatch.DrawString(font, "Wpisana przez gracza litera to: " + wpisanaLitera, new Vector2(GraphicsDevice.Viewport.Width / 2 - 170, 7 * GraphicsDevice.Viewport.Height / 10), Color.White);
+                spriteBatch.DrawString(font, "Wpisana przez gracza litera to: " + wpisanaLitera, new Vector2(GraphicsDevice.Viewport.Width / 2 - 188, 7 * GraphicsDevice.Viewport.Height / 10-35), Color.White);
                 spriteBatch.Draw(tekstury["ConfirmButtonTexture"], recConfitmButton, ConfirmButtonColor);
                 spriteBatch.DrawString(font, "Lifes" + game.GetGraWisielec().GetLifes(), new Vector2(1100,110), Color.White);
             }
@@ -109,28 +109,28 @@ namespace WisielecGUI.States
         private void CalculateItemsPositions()
         {
             recConfitmButton.X = GraphicsDevice.Viewport.Width / 2 - recConfitmButton.Size.X / 2;
-            recConfitmButton.Y = 9*GraphicsDevice.Viewport.Height / 10 - 9*recConfitmButton.Size.Y / 10;
+            recConfitmButton.Y = 8*GraphicsDevice.Viewport.Height / 10 - 9*recConfitmButton.Size.Y / 10-20;
             hangman.X = 66;
             hangman.Y = 73;
             recBackButton.X = 5*GraphicsDevice.Viewport.Width / 6 - recBackButton.Size.X / 2;
-            recBackButton.Y = 9 * GraphicsDevice.Viewport.Height / 10 - 9 * recBackButton.Size.Y / 10;
+            recBackButton.Y = 9 * GraphicsDevice.Viewport.Height / 10 - 9 * recBackButton.Size.Y / 10-25;
         }
 
         private void CalculateItemsSize()
         {
-            recConfitmButton.Height = GraphicsDevice.Viewport.Height / 12;
-            recConfitmButton.Width = GraphicsDevice.Viewport.Width / 6;
+            recConfitmButton.Height = GraphicsDevice.Viewport.Height / 18;
+            recConfitmButton.Width = GraphicsDevice.Viewport.Width / 9;
             hangman.Height = GraphicsDevice.Viewport.Height -160;
             hangman.Width = GraphicsDevice.Viewport.Width -900;
-            recBackButton.Height = GraphicsDevice.Viewport.Height / 12;
-            recBackButton.Width = GraphicsDevice.Viewport.Width / 6;
+            recBackButton.Height = GraphicsDevice.Viewport.Height / 18;
+            recBackButton.Width = GraphicsDevice.Viewport.Width / 9;
         }
 
         private void ButtonsEvents()
         {
             if ((recConfitmButton.Intersects(Cursor)))
             {
-                ConfirmButtonColor = Color.Green;
+                ConfirmButtonColor = Color.Yellow;
                 if (InputManager.LeftButtonPressed() && game.GetGraWisielec().GetLifes()!=0)
                 {
                     ConfirmButtonColor = Color.Red;
@@ -149,7 +149,7 @@ namespace WisielecGUI.States
 
             if ((recBackButton.Intersects(Cursor)))
             {
-                BackButtonColor = Color.Green;
+                BackButtonColor = Color.Yellow;
                 if (InputManager.LeftButtonPressed() && game.GetGraWisielec().GetLifes() == 0)
                 {
                     BackButtonColor = Color.Red;

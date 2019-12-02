@@ -20,6 +20,8 @@ namespace WisielecGUI.States
         Rectangle Cursor;
         Rectangle recBackButton;
         Rectangle recEasyGameButton;
+        Rectangle recHardGameButton;
+        Color HardGameButtonColor;
         Color BackButtonColor;
         string imie="";
         private Color EasyGameButtonColor;
@@ -31,9 +33,10 @@ namespace WisielecGUI.States
         }
         protected override void LoadContent()
         {
-            tekstury.Add("BackButtonTexture", game.Content.Load<Texture2D>("BackButton"));
+            tekstury.Add("BackButtonTexture", game.Content.Load<Texture2D>("Powrot"));
             tekstury.Add("TextBoxTexture", game.Content.Load<Texture2D>("TextBox"));
-            tekstury.Add("EasyGameButtonTexture", game.Content.Load<Texture2D>("EasyGameButton"));
+            tekstury.Add("EasyGameButtonTexture", game.Content.Load<Texture2D>("Latwy"));
+            tekstury.Add("HardGameButtonTexture", game.Content.Load<Texture2D>("Trudny"));
             font = game.Content.Load<SpriteFont>("FontMenu");
 
         }
@@ -44,6 +47,7 @@ namespace WisielecGUI.States
             spriteBatch.DrawString(font, imie, new Vector2(GraphicsDevice.Viewport.Width / 2-8*imie.Length-50, GraphicsDevice.Viewport.Height / 2), Color.White);
             spriteBatch.Draw(tekstury["BackButtonTexture"], recBackButton, BackButtonColor);
             spriteBatch.Draw(tekstury["EasyGameButtonTexture"], recEasyGameButton, EasyGameButtonColor);
+            spriteBatch.Draw(tekstury["HardGameButtonTexture"], recHardGameButton, HardGameButtonColor);
             spriteBatch.End();
 
         }
@@ -68,24 +72,28 @@ namespace WisielecGUI.States
         private void CalculateItemsPositions()
         {
             recBackButton.X = GraphicsDevice.Viewport.Width / 10 - recBackButton.Size.X / 10;
-            recBackButton.Y = 9*GraphicsDevice.Viewport.Height / 10 - 9*recBackButton.Size.Y / 10;
+            recBackButton.Y = 9*GraphicsDevice.Viewport.Height / 10 - 9*recBackButton.Size.Y / 10-40;
             recEasyGameButton.X = GraphicsDevice.Viewport.Width / 10 - recEasyGameButton.Size.X / 10;
             recEasyGameButton.Y = 6 * GraphicsDevice.Viewport.Height / 10 - 6 * recEasyGameButton.Size.Y / 10;
+            recHardGameButton.X = 9*GraphicsDevice.Viewport.Width / 10 - 9*recHardGameButton.Size.X / 10;
+            recHardGameButton.Y = 6 * GraphicsDevice.Viewport.Height / 10 - 6 * recHardGameButton.Size.Y / 10;
         }
 
         private void CalculateItemsSize()
         {
-            recBackButton.Height = GraphicsDevice.Viewport.Height / 12;
-            recBackButton.Width = GraphicsDevice.Viewport.Width / 6;
-            recEasyGameButton.Height = GraphicsDevice.Viewport.Height / 12;
-            recEasyGameButton.Width = GraphicsDevice.Viewport.Width / 6;
+            recBackButton.Height = GraphicsDevice.Viewport.Height / 18;
+            recBackButton.Width = GraphicsDevice.Viewport.Width / 9;
+            recEasyGameButton.Height = GraphicsDevice.Viewport.Height / 18;
+            recEasyGameButton.Width = GraphicsDevice.Viewport.Width / 9;
+            recHardGameButton.Height = GraphicsDevice.Viewport.Height / 18;
+            recHardGameButton.Width = GraphicsDevice.Viewport.Width / 9;
         }
 
         private void ButtonsEvents()
         {
             if ((recBackButton.Intersects(Cursor)))
             {
-                BackButtonColor = Color.Green;
+                BackButtonColor = Color.Yellow;
                 if (InputManager.LeftButtonPressed())
                 {
                     BackButtonColor = Color.Red;
@@ -113,6 +121,24 @@ namespace WisielecGUI.States
             }
             else
                 EasyGameButtonColor = Color.White;
+            //jeśli kliknie sie w grę trudną
+            if ((recHardGameButton.Intersects(Cursor)))
+            {
+                HardGameButtonColor = Color.Red;
+                if (InputManager.LeftButtonPressed())
+                {
+                    HardGameButtonColor = Color.Red;
+                    InputManager.NapisFlush();
+                    game.SetImie(imie);
+                    graWisielec.NowaGra(2, imie);
+                    game.SetGraWisielec(graWisielec);
+                    imie = "";
+                    GameState.IsShowGameScene = true;
+
+                }
+            }
+            else
+                HardGameButtonColor = Color.White;
         }
         public String GetImie()
         {

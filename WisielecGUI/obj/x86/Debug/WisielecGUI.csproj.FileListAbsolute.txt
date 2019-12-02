@@ -21,8 +21,6 @@ C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\obj\x86\Debug\WisielecGUI.csproj.
 C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\obj\x86\Debug\WisielecGUI.exe
 C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\obj\x86\Debug\WisielecGUI.pdb
 C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\FontMenu.xnb
-C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\NewGameButton.xnb
-C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\RankingButton.xnb
 C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\ExitButton.xnb
 C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\FontRanking.xnb
 C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\RankingTitle.xnb
@@ -43,3 +41,10 @@ C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\han
 C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\hangman\7.xnb
 C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\hangman\8.xnb
 C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\hangman\9.xnb
+C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\NowaGra.xnb
+C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\Ranking.xnb
+C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\Wyjscie.xnb
+C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\Latwy.xnb
+C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\Potwierdz.xnb
+C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\Powrot.xnb
+C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\Trudny.xnb

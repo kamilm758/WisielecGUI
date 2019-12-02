@@ -33,9 +33,9 @@ namespace WisielecGUI.States
         protected override void LoadContent()
         {
             font = game.Content.Load<SpriteFont>("TitleFont");
-            tekstury.Add("NewGameButtonTexture", game.Content.Load<Texture2D>("NewGameButton"));
-            tekstury.Add("RankingButtonTexture", game.Content.Load<Texture2D>("RankingButton"));
-            tekstury.Add("ExitButtonTexture", game.Content.Load<Texture2D>("ExitButton"));
+            tekstury.Add("NewGameButtonTexture", game.Content.Load<Texture2D>("NowaGra"));
+            tekstury.Add("RankingButtonTexture", game.Content.Load<Texture2D>("Ranking"));
+            tekstury.Add("ExitButtonTexture", game.Content.Load<Texture2D>("Wyjscie"));
         }
 
         public void Draw(SpriteBatch spriteBatch, GameTime gameTime)
@@ -75,19 +75,19 @@ namespace WisielecGUI.States
 
         private void CalculateItemsSize()
         {
-            recNewGame.Height = GraphicsDevice.Viewport.Height / 6;
-            recNewGame.Width = GraphicsDevice.Viewport.Width / 3;
-            recRanking.Height = GraphicsDevice.Viewport.Height / 6;
-            recRanking.Width = GraphicsDevice.Viewport.Width / 3;
-            recExit.Height = GraphicsDevice.Viewport.Height / 6;
-            recExit.Width = GraphicsDevice.Viewport.Width / 3;
+            recNewGame.Height = GraphicsDevice.Viewport.Height / 9;
+            recNewGame.Width = GraphicsDevice.Viewport.Width / 5;
+            recRanking.Height = GraphicsDevice.Viewport.Height / 10;
+            recRanking.Width = GraphicsDevice.Viewport.Width / 6;
+            recExit.Height = GraphicsDevice.Viewport.Height / 10;
+            recExit.Width = GraphicsDevice.Viewport.Width / 6;
         }
 
         private void ButtonsEvents()
         {
             if ((recNewGame.Intersects(Cursor)))
             {
-                NewGameButtonColor = Color.Green;
+                NewGameButtonColor = Color.Yellow;
                 if (InputManager.LeftButtonPressed())
                 {
                     NewGameButtonColor = Color.Red;
@@ -99,7 +99,7 @@ namespace WisielecGUI.States
 
             if ((recRanking.Intersects(Cursor)))
             {
-                RankingButtonColor = Color.Green;
+                RankingButtonColor = Color.Yellow;
                 if (InputManager.LeftButtonPressed())
                 {
                     RankingButtonColor = Color.Red;
@@ -112,7 +112,7 @@ namespace WisielecGUI.States
 
             if ((recExit.Intersects(Cursor)))
             {
-                ExitButtonColor = Color.Green;
+                ExitButtonColor = Color.Yellow;
                 if (InputManager.LeftButtonPressed())
                 {
                     ExitButtonColor = Color.Red;

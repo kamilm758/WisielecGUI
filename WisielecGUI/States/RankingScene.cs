@@ -38,7 +38,7 @@ namespace WisielecGUI.States
             sortedList = ranking.GetSortedRanking();
             font = game.Content.Load<SpriteFont>("FontRanking");
             tekstury.Add("RankingTitleTexture", game.Content.Load<Texture2D>("RankingTitle"));
-            tekstury.Add("BackButtonTexture", game.Content.Load<Texture2D>("BackButton"));
+            tekstury.Add("BackButtonTexture", game.Content.Load<Texture2D>("Powrot"));
         }
 
         public void Draw(SpriteBatch spriteBatch, GameTime gameTime)
@@ -91,7 +91,7 @@ namespace WisielecGUI.States
             recRankTitle.X = GraphicsDevice.Viewport.Width / 2 - recRankTitle.Size.X / 2;
             recRankTitle.Y = GraphicsDevice.Viewport.Height /(sortedList.Count()+3);
             recBackButton.X = GraphicsDevice.Viewport.Width / 10;
-            recBackButton.Y = (sortedList.Count() + 2)*GraphicsDevice.Viewport.Height / (sortedList.Count() + 3)-10;
+            recBackButton.Y = 550;
         }
 
         private void CalculateItemsSize()
@@ -113,7 +113,7 @@ namespace WisielecGUI.States
         {
             if ((recBackButton.Intersects(Cursor)))
             {
-                BackButtonColor = Color.Green;
+                BackButtonColor = Color.Yellow;
                 if (mouseState.LeftButton == ButtonState.Pressed)
                 {
                     BackButtonColor = Color.Red;
