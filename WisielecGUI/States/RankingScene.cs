@@ -47,6 +47,8 @@ namespace WisielecGUI.States
             spriteBatch.Draw(tekstury["RankingTitleTexture"], recRankTitle, Color.White);
             foreach (KeyValuePair<string, int> pair in sortedList)
             {
+                if (iterator == 8)
+                    break;
                 ManageRankList(iterator, (iterator+". "+pair.Key + " : " + pair.Value).Length);
                 spriteBatch.DrawString(font, (iterator -1)+ ". " + pair.Key+" : "+pair.Value, listPosition , listColor);
                 iterator++;
@@ -67,7 +69,7 @@ namespace WisielecGUI.States
         public void ManageRankList(int iter, int length)
         {
             listPosition.X = GraphicsDevice.Viewport.Width / 2-(5*length);
-            listPosition.Y = iter*GraphicsDevice.Viewport.Height / (sortedList.Count()+3)+recRankTitle.Y;
+            listPosition.Y = iter*GraphicsDevice.Viewport.Height / (sortedList.Count()+3)+recRankTitle.Y+30;
             if (iter == 2)
             {
                 listColor = Color.Gold;
@@ -89,7 +91,7 @@ namespace WisielecGUI.States
         private void CalculateItemsPositions()
         {
             recRankTitle.X = GraphicsDevice.Viewport.Width / 2 - recRankTitle.Size.X / 2;
-            recRankTitle.Y = GraphicsDevice.Viewport.Height /(sortedList.Count()+3);
+            recRankTitle.Y = GraphicsDevice.Viewport.Height /(sortedList.Count()+3)+30;
             recBackButton.X = GraphicsDevice.Viewport.Width / 10;
             recBackButton.Y = 550;
         }

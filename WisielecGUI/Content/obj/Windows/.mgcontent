@@ -7,6 +7,7 @@
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/BackButton.png</File>
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/bb5.png</File>
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/ConfirmButton.png</File>
+    <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/crown.png</File>
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/EasyGameButton.png</File>
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/ExitButton.png</File>
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/FontMenu.spritefont</File>
@@ -23,17 +24,22 @@
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/hangman/8.png</File>
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/hangman/9.png</File>
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/Latwy.png</File>
+    <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/notbad.png</File>
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/NowaGra.png</File>
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/Potwierdz.png</File>
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/Powrot.png</File>
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/Ranking.png</File>
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/RankingTitle.png</File>
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/TextBox.png</File>
+    <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/thanos.png</File>
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/TitleFont.spritefont</File>
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/Trudny.png</File>
     <File>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/Wyjscie.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

@@ -49,6 +49,18 @@
 /processorParam:TextureFormat=Color
 /build:ConfirmButton.png
 
+#begin crown.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:crown.png
+
 #begin EasyGameButton.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -226,6 +238,18 @@
 /processorParam:TextureFormat=Color
 /build:Latwy.png
 
+#begin notbad.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:notbad.png
+
 #begin NowaGra.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -297,6 +321,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextBox.png
+
+#begin thanos.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:thanos.png
 
 #begin TitleFont.spritefont
 /importer:FontDescriptionImporter

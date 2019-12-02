@@ -9,6 +9,11 @@ namespace WisielecGUI
 {
     public static class InputManager
     {
+        public static List<Keys> forbiddenKeys = new List<Keys> {Keys.Enter,Keys.LeftControl,Keys.LeftControl,
+        Keys.OemTilde,Keys.D0,Keys.D1,Keys.D2,Keys.D3,Keys.D4,Keys.D5,Keys.D6,Keys.D7,Keys.D8,Keys.D9,Keys.OemPlus,
+        Keys.OemMinus,Keys.Escape,Keys.OemPipe,Keys.OemOpenBrackets,Keys.OemCloseBrackets,Keys.Tab,Keys.CapsLock,
+        Keys.LeftWindows,Keys.OemComma,Keys.OemPeriod,Keys.OemQuestion,Keys.LeftAlt,Keys.Space,Keys.OemSemicolon,
+        Keys.OemQuotes,Keys.Left,Keys.Up,Keys.Down,Keys.Right,Keys.PageDown,Keys.PageUp,Keys.RightControl};
         public static KeyboardState CurrentState;
         public static KeyboardState PreviousState;
         public static MouseState CurrentStateMouse;
@@ -48,6 +53,8 @@ namespace WisielecGUI
             var keys = InputManager.GetPressedKeys();
             foreach (var key in keys)
             {
+                if (forbiddenKeys.Contains(key))
+                    return "";
                 if (key == Keys.Back)
                 {
                     if (builder.Length == 0)
@@ -74,6 +81,8 @@ namespace WisielecGUI
             var keys = InputManager.GetPressedKeys();
             foreach (var key in keys)
             {
+                if (forbiddenKeys.Contains(key))
+                    return "X";
                 if (key == Keys.Back)
                 {
                     if (builder.Length == 0)

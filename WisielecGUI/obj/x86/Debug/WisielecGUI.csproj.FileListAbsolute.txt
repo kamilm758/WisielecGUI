@@ -48,3 +48,6 @@ C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\Lat
 C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\Potwierdz.xnb
 C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\Powrot.xnb
 C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\Trudny.xnb
+C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\crown.xnb
+C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\notbad.xnb
+C:\Users\kamil\Desktop\WisielecGUI\WisielecGUI\bin\Windows\x86\Debug\Content\thanos.xnb

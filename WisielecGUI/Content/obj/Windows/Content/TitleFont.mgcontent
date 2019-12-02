@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/TitleFont.spritefont</SourceFile>
-  <SourceTime>2018-12-08T17:35:46+01:00</SourceTime>
+  <SourceTime>2019-12-02T21:09:40.7805026+01:00</SourceTime>
   <DestFile>C:/Users/kamil/Desktop/WisielecGUI/WisielecGUI/Content/bin/Windows/Content/TitleFont.xnb</DestFile>
-  <DestTime>2019-11-18T15:52:16.9608841+01:00</DestTime>
+  <DestTime>2019-12-02T21:09:51.0118269+01:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>

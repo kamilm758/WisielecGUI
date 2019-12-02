@@ -41,6 +41,7 @@ namespace WisielecGUI.States
         public void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
             spriteBatch.Begin();
+            spriteBatch.DrawString(font, "Wisielec", new Vector2(380,130), Color.White);
             spriteBatch.Draw(tekstury["NewGameButtonTexture"], recNewGame, NewGameButtonColor);
             spriteBatch.Draw(tekstury["RankingButtonTexture"], recRanking, RankingButtonColor);
             spriteBatch.Draw(tekstury["ExitButtonTexture"], recExit, ExitButtonColor);
@@ -66,11 +67,11 @@ namespace WisielecGUI.States
         private void CalculateItemsPositions()
         {
             recNewGame.X = GraphicsDevice.Viewport.Width / 2 - recNewGame.Size.X / 2;
-            recNewGame.Y = GraphicsDevice.Viewport.Height / 4 - recNewGame.Size.Y / 4;
+            recNewGame.Y = 2*GraphicsDevice.Viewport.Height / 6 - recNewGame.Size.Y / 6+70;
             recRanking.X = GraphicsDevice.Viewport.Width / 2 - recNewGame.Size.X / 2;
-            recRanking.Y = GraphicsDevice.Viewport.Height / 2 - recNewGame.Size.Y / 2;
+            recRanking.Y = 3*GraphicsDevice.Viewport.Height / 6 - recNewGame.Size.Y / 6+45;
             recExit.X = GraphicsDevice.Viewport.Width / 2 - recNewGame.Size.X / 2;
-            recExit.Y = 3*GraphicsDevice.Viewport.Height / 4 - 3*recNewGame.Size.Y / 4;
+            recExit.Y = 4*GraphicsDevice.Viewport.Height / 6 - recNewGame.Size.Y / -6;
         }
 
         private void CalculateItemsSize()

@@ -20,7 +20,10 @@ namespace WisielecGUI.States
         MouseState mouseState;
         Rectangle Cursor;
         Rectangle recConfitmButton;
+        Rectangle recCrown;
+        Rectangle recNotBad;
         Rectangle hangman;
+        Rectangle recThanos;
         Color ConfirmButtonColor;
         List<int> pozycjeLiter = new List<int>();
         int czyZawiera;
@@ -48,6 +51,9 @@ namespace WisielecGUI.States
             tekstury.Add("9", game.Content.Load<Texture2D>("hangman/9"));
             tekstury.Add("10", game.Content.Load<Texture2D>("hangman/10"));
             tekstury.Add("BackButtonTexture", game.Content.Load<Texture2D>("Powrot"));
+            tekstury.Add("crownTexture", game.Content.Load<Texture2D>("crown"));
+            tekstury.Add("notbadTexture", game.Content.Load<Texture2D>("notbad"));
+            tekstury.Add("thanosTexture", game.Content.Load<Texture2D>("thanos"));
         }
 
         public void Draw(SpriteBatch spriteBatch, GameTime gameTime)
@@ -69,13 +75,19 @@ namespace WisielecGUI.States
                 haslo = null;
                 spriteBatch.Draw(tekstury[(10 - game.GetGraWisielec().GetLifes()).ToString()], hangman, Color.White);
                 spriteBatch.Draw(tekstury["BackButtonTexture"], recBackButton, BackButtonColor);
-                spriteBatch.DrawString(font, "Niestety przegrales :(", new Vector2(GraphicsDevice.Viewport.Width / 2 - 130, GraphicsDevice.Viewport.Height / 4), Color.White);
+                spriteBatch.DrawString(font, "Niestety przegrales :(", new Vector2(GraphicsDevice.Viewport.Width / 2 - 130, GraphicsDevice.Viewport.Height / 4-100), Color.White);
+                spriteBatch.DrawString(font, "Haslem bylo "+game.GetGraWisielec().GetSlowo().GetSlowo(), new Vector2(GraphicsDevice.Viewport.Width / 2 - 130, GraphicsDevice.Viewport.Height / 4-60), Color.White);
+                spriteBatch.Draw(tekstury["thanosTexture"], recThanos, Color.White);
+
             }
             else if (game.GetGraWisielec().KoniecGry() == 2)
             {
                 haslo = null;
                 spriteBatch.Draw(tekstury["BackButtonTexture"], recBackButton, BackButtonColor);
-                spriteBatch.DrawString(font, "Brawo! Wygrywasz :)", new Vector2(GraphicsDevice.Viewport.Width / 2 - 130, GraphicsDevice.Viewport.Height / 4), Color.White);
+                spriteBatch.DrawString(font, "Brawo! Wygrywasz :)", new Vector2(GraphicsDevice.Viewport.Width / 2 - 130, GraphicsDevice.Viewport.Height / 4-60), Color.White);
+                spriteBatch.Draw(tekstury["8"], hangman, Color.White);
+                spriteBatch.Draw(tekstury["crownTexture"], recCrown, Color.White);
+                spriteBatch.Draw(tekstury["notbadTexture"], recNotBad, Color.White);
             }
             spriteBatch.End();
         }
@@ -112,6 +124,12 @@ namespace WisielecGUI.States
             recConfitmButton.Y = 8*GraphicsDevice.Viewport.Height / 10 - 9*recConfitmButton.Size.Y / 10-20;
             hangman.X = 66;
             hangman.Y = 73;
+            recCrown.X = 210;
+            recCrown.Y = 135;
+            recNotBad.X = 455;
+            recNotBad.Y = 190;
+            recThanos.X = 455;
+            recThanos.Y = 190;
             recBackButton.X = 5*GraphicsDevice.Viewport.Width / 6 - recBackButton.Size.X / 2;
             recBackButton.Y = 9 * GraphicsDevice.Viewport.Height / 10 - 9 * recBackButton.Size.Y / 10-25;
         }
@@ -122,6 +140,12 @@ namespace WisielecGUI.States
             recConfitmButton.Width = GraphicsDevice.Viewport.Width / 9;
             hangman.Height = GraphicsDevice.Viewport.Height -160;
             hangman.Width = GraphicsDevice.Viewport.Width -900;
+            recCrown.Height = 115;
+            recCrown.Width = 124;
+            recNotBad.Height = 380;
+            recNotBad.Width = 380;
+            recThanos.Height = 380;
+            recThanos.Width = 380;
             recBackButton.Height = GraphicsDevice.Viewport.Height / 18;
             recBackButton.Width = GraphicsDevice.Viewport.Width / 9;
         }
